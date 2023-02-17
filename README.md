@@ -67,6 +67,7 @@ We can clearly see the elbow in the Elbow Graph is at k = 4. So we will use this
 model = KMeans(n_clusters=4, random_state=0)
 model.fit(pcs_df)
 predictions = model.predict(pcs_df)
+clustered_df["Class"] = model.labels_
 ```
 
 ![Clustered_df](https://github.com/doliver231/Cryptocurrencies/blob/main/Images/ClusteredDF.png)
